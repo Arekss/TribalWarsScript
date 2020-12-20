@@ -24,14 +24,17 @@ function edit() {
 }
 
 function getVillages() {
-    villages.each(function(key, village) {
+	
+	 var table = document.getElementById("command_actions");
+	 table.innerHTML = "<p>Foo Bar</p>";
+   /* villages.each(function(key, village) {
         var $label = $(village).find('.quickedit-label');
         var villageName = $label.attr('data-text');
 
         dict[$(village).attr('data-id')] = villageName;
     });
 
-    $("#villNames").val(JSON.stringify(dict));
+    $("#villNames").val(JSON.stringify(dict)); */
 }
 
 function shuffle(a) {
@@ -101,13 +104,8 @@ function rush() {
 if (game_data.screen == 'place') {
     var okienko = `
         <div style="text-align: center;">
-            <h2>stv village renamer</h2><br>
-            <h4>stivens dla skubi \<3</h4> <br><hr><br><br><br>
+            <h2>Wyslij karete</h2><br>
             <button type="button" class="btn" onclick="getVillages()">Pobierz nazwy wiosek</button><br><br><br>
-            <textarea rows="8" cols="40" id="villNames"></textarea><br><br><br>
-            <button type="button" class="btn" onclick="getDict()">Przywraca nazwy</button><br><br><br>
-            <button type="button" class="btn" onclick="setMono()">Ustaw jednakowe nazwy</button><br><br><br>
-            <button type="button" class="btn" onclick="rush()">! CORD RUSH !</button><br><br><br>
         </div>
     `;
     Dialog.show("okienko_komunikatu",okienko);
