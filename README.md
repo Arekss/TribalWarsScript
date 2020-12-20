@@ -1,0 +1,2 @@
+# TribalWarsScript
+js script
