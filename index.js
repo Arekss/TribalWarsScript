@@ -26,7 +26,7 @@ function edit() {
 function getVillages() {
 	
 	 var table = document.getElementById("command_actions");
-	 table.innerHTML = "<p>Foo Bar</p>";
+	 table.innerHTML += "<p>Foo Bar</p>";
    /* villages.each(function(key, village) {
         var $label = $(village).find('.quickedit-label');
         var villageName = $label.attr('data-text');
