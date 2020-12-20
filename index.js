@@ -8,14 +8,14 @@ var dict = {};
 var inputDict;
 var tab = [];
 var villages = $('.quickedit-vn');
-var edit_window = "<button type=\"button\" onclick=\"edit()\">ZmieÅ„ nazwÄ™</button>";
+var edit_window = "<button type=\"button\" onclick=\"edit()\">Zmien nazwy</button>";
 var btn_tab = [];
 var counter = 1;
 
 function edit() {
     if (btn_tab.length != 0) {
         $(btn_tab.pop()).trigger('click');
-        UI.InfoMessage('Zmieniono nazwÄ™ wioski #'+counter, 1000, 'success');
+        UI.InfoMessage('Zmieniono nazwy wioski #'+counter, 1000, 'success');
         counter++;
     } else {
         UI.InfoMessage('Zmiany wprowadzone', 5000, 'success');
@@ -57,7 +57,7 @@ function getCoords(){
 }
 
 function getDict() {
-    inputDict = JSON.parse(prompt('WprowadÅº "sÅ‚ownik" wiosek:'));
+    inputDict = JSON.parse(prompt('Wprowadz "slownik" wiosek:'));
 
     villages.each(function(key, village){
         $(village).find('.rename-icon').trigger('click');
@@ -74,7 +74,7 @@ function getDict() {
 }
 
 function setMono() {
-    var name = prompt('Podaj nazwÄ™ ktÃ³rÄ… chcesz wprowadziÄ‡:');
+    var name = prompt('Podaj nazwe ktora chcesz wprowadzic:');
 
     villages.each(function(key, village){
         $(village).find('.rename-icon').trigger('click');
@@ -105,12 +105,12 @@ if (game_data.screen == 'overview_villages') {
             <h4>stivens dla skubi \<3</h4> <br><hr><br><br><br>
             <button type="button" class="btn" onclick="getVillages()">Pobierz nazwy wiosek</button><br><br><br>
             <textarea rows="8" cols="40" id="villNames"></textarea><br><br><br>
-            <button type="button" class="btn" onclick="getDict()">PrzywrÃ³Ä‡ nazwy</button><br><br><br>
+            <button type="button" class="btn" onclick="getDict()">Przywraca nazwy</button><br><br><br>
             <button type="button" class="btn" onclick="setMono()">Ustaw jednakowe nazwy</button><br><br><br>
             <button type="button" class="btn" onclick="rush()">! CORD RUSH !</button><br><br><br>
         </div>
     `;
     Dialog.show("okienko_komunikatu",okienko);
 } else {
-    UI.InfoMessage('Skryptu naleÅ¼y uÅ¼ywaÄ‡ z przeglÄ…du wiosek.', 5000, 'error');
+    UI.InfoMessage('Skryptu nalezy uzywac z przegladu wiosek.', 5000, 'error');
 }
