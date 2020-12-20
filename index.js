@@ -98,7 +98,7 @@ function rush() {
     Dialog.show("okienko_komunikatu", edit_window);
 }
 
-if (game_data.screen == 'overview_villages') {
+if (game_data.screen == 'place') {
     var okienko = `
         <div style="text-align: center;">
             <h2>stv village renamer</h2><br>
