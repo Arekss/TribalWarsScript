@@ -102,13 +102,14 @@ function rush() {
 }
 
 if (game_data.screen == 'place') {
-    var okienko = `
+	getVillages();
+   /* var okienko = `
         <div style="text-align: center;">
             <h2>Wyslij karete</h2><br>
             <button type="button" class="btn" onclick="getVillages()">Pobierz nazwy wiosek</button><br><br><br>
         </div>
     `;
-    Dialog.show("okienko_komunikatu",okienko);
+    Dialog.show("okienko_komunikatu",okienko); */
 } else {
     UI.InfoMessage('Skryptu nalezy uzywac z przegladu wiosek.', 5000, 'error');
 }
